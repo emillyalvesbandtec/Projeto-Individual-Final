@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background: url(../img/logo\ \(2\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 
+    Geneva, Verdana, sans-serif;
+}
+
+
+.nav{
+ 
+    width: 100%;
+    height: 44px;
+    background-color: rgba(0, 0, 0 , .4);
+}
+
+a{
+    color:#FE620B;
+}
+
+.home{
+ 
+        text-decoration: none;
+        font-size: 17px;
+        margin-left: 3%;
+        float: left;
+        margin-top: 10px
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.sobre{
+
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 3%;
+    float: left;
+    margin-top: 10px
+}
+
+
+.aside{
+    float: left;
+    width: 450px;
+    height: 550px;
+    background-color: rgba(0, 0, 0 , .7);
+    margin-left: 5%;
+    margin-top: 2%;
+    border-radius: 7px;
+}
+
+.sport{
+    color: #fff;
+    width: 111px;
+    height: 31px;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.tech{
+    color: #FE620B;
+    margin-left: 82px;
+    width: 34px;
+    font-size: 28px;
+}
+
+.titulo{
+    color: #fff;
+    margin-left: 21%;
+    margin-top: 34%
+}
+
+.titulo-menor{
+    color: #FE620B;
+    /* color: rgba(255, 255, 255, 0.7); */
+    margin-top: 2%;
+    font-size: 19px;
+    margin-left: 5%;
+    padding: 23px;
+}
+
+.ano{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 30%;
+    margin-left: 5%;
+    margin-top: 40%;
+    margin-top: 30%;
+}
+
+.conteudo{
+
+    float: right;
+    margin-top: 1%;
+    height: 600px;
+    width: 393px;
+    background-color: rgba(0, 0, 0 , .4);
+    border-radius: 7px;
+    margin-right: 4%;
+}
+
+.tremer{
+    animation : tremer 1s linear 2;
+}
+
+ .conteudo h1{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+input{
+    position: relative;
+    display: block;
+    width: 180px;
+    left: 50%;
+    margin-left: -90px;
+    margin-bottom: 15px; 
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+::-webkit-input-placeholder{
+    color: #fff;
+}
+
+button{
+    width: 123px;
+    padding: 10px;
+    background: transparent;
+    color: #fff;
+    border: solid 1px #FE620B;
+    left: 43%;
+    margin-left: 126px;
+    margin-top: 29px;
+    border-radius: 4px;
+
+}
+
+button:hover{
+
+    transition: all 1s linear;
+    background:#FE620B;
+    color: #fff;
+}
+
+
+.conta{
+
+    top: 90%;
+    right: 14%;
+    position: absolute;
+    font-size: 12px;
+} 
+
+.tremer{
+    animation : tremer 0.3s linear 2;
+}
+
+@keyframes tremer{
+    0%{
+        transform: translateX(0%);
+    }25%{
+        transform: translateX(10%);
+    }50%{
+        transform: translateX(-10%);
+    }100%{
+        transform: translateX(0%);
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="shortcut icon" href="../projeto_individual/img/basketball2.png" type="image/x-icon">
+    <title>SPORTtech-Tela de cadastro</title>
+</head>
+
+<body>
+
+    <div class="nav">
+        <a class="home" href="../projeto_individual/index.html">Home</a>
+        <a href="index.html#sobre" class="sobre">Sobre</a>
+    </div>
+
+    <div class="aside">
+
+        <div class="logo">
+            <h1 class="sport">SPORT</h1>
+            <p class="tech">tech</p>
+        </div>
+
+        <h1 class="titulo">Venha participar!</h1>
+        <p class="titulo-menor">junte-se anós, e sempre estara por dentro de como está indo seu time no campeonato</p>
+
+        <p class="ano">©2019</p>
+    </div>
+
+    <form method="POST" id="form_cadastro" onsubmit="return cadastro()">
+    <div class="conteudo">
+            <h1>Cadastro</h1>
+            <input id="nome" type="text" placeholder="Nome" name="nome">
+            <input id="sobre" type="text" placeholder="Sobrenome" name="sobre">
+            <input id="email" type="email" placeholder="E-mail" name="email">
+            <input id="senha" type="password" placeholder="Senha" name="senha">
+            <input onkeyup="senhaErrada()" id="rep_senha" type="password" placeholder="Repetir a senha">
+            <button type="submit">Cadastre-se</button>
+            <a href="./login.html" class="conta">já possui uma conta?</a>
+        </div>
+    </form>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    form = document.querySelector(".conteudo");
+    function cadastro() {
+
+        var valor_nome = nome.value;
+        var valor_sobre = sobre.value;
+        var valor_email = email.value;
+        var valor_senha = senha.value;
+        var valor_rep_senha = rep_senha.value;
+
+
+
+        if (valor_nome == '' || valor_sobre == '' || valor_email == '' ||
+            valor_senha.length == '' || valor_senha == '' || valor_rep_senha == '') {
+
+
+            nome.style.borderBottom = '1px solid red';
+            sobre.style.borderBottom = '1px solid red';
+            email.style.borderBottom = '1px solid red';
+            senha.style.borderBottom = '1px solid red';
+            tremer();
+            alert(`Preencha todos os campos`);
+
+
+        } else if (valor_nome.length <= 3) {
+
+            nome.style.borderBottom = '1px solid red';
+            tremer();
+            alert(`Nome muito pequeno`);
+
+        } else if (!valor_sobre != '') {
+
+            sobre.style.borderBottom = '1px solid red';
+            tremer();
+            alert(`Infome seu sobrenome`);
+        }
+
+        // }else if (!valor_email.endsWith('@bandtec.com.br')) {
+
+        //     email.style.borderBottom = '1px solid red';
+        //     tremer(); 
+        //     alert(`E-mail diferente de @bandtec.com.br`);
+
+        else if (valor_senha.length < 4) {
+
+            tremer();
+            senha.style.borderBottom = '1px solid red';
+            alert(`Senha muito pequena`);
+        } else if (valor_senha != valor_rep_senha) {
+
+            tremer();
+            alert(`Senhas diferentes`);
+
+        } else {
+
+
+            var formulario = new URLSearchParams(new FormData(form_cadastro));
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                body: formulario
+            }).then(function (response) {
+
+                if (response.ok) {
+
+                    window.location.href = 'login.html';
+
+                } else {
+
+                    console.log('Erro de cadastro!');
+                    response.text().then(function (resposta) {
+                        
+                    });
+                }
+            });
+
+            return false;
+            //location.href = "login.html";
+        }
+        return false
+
+    }
+
+
+    function senhaErrada() {
+        var valor_senha = senha.value;
+        var valor_rep_senha = rep_senha.value;
+
+        if (valor_senha != valor_rep_senha) {
+
+            rep_senha.style.borderBottom = '1px solid red';
+
+        } else {
+            rep_senha.style.borderBottom = '1px solid white';
+        }
+    }
+
+    function tremer() {
+        form.classList.add("tremer");
+        form.addEventListener("animationend", function (event) {
+            form.classList.remove("tremer");
+        });
+    }
+</script>

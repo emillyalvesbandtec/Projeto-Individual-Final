@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(../img/inicial2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.fundo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: rgba(0, 0, 0, .9);
+    /* background: radial-gradient(black, transparent); */
+}
+
+.conteudo{
+    position: absolute;
+    width: 100%;
+    height: 111px;
+    background: rgba(196, 196, 196, 0.1);
+}
+
+
+
+
+.titulo{
+
+    font-size: 48px;
+    color: #FFFFFF;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+
+.tech{
+ 
+    font-size: 28px;
+    color: #FE620B;
+    margin-left: 12%;
+    margin-top: -1%;
+}
+
+a{
+    font-size: 28px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #FE620B;
+}
+
+.link-noticias{
+    position: absolute;
+    left: 28%;
+    top: 31%;
+}
+
+.link-sobre{
+    position: absolute;
+    left: 41%;
+    top: 31%;
+    
+}
+
+.link-login{
+    position: absolute;
+    left: 66%;
+    top: 31%;
+    
+}
+
+
+.link-contato{
+    position: absolute;
+    left: 53%;
+    top: 31%;
+    
+}
+
+
+::-webkit-input-placeholder{
+    color: #fff;
+}
+
+button{
+    position: absolute;
+    width: 205px;
+    height: 46px;
+    left: 1112px;
+    top: 30px;
+    background: #FE620B;
+    border-radius: 2px;
+    font-size: 19px;
+    border: solid 1px #fff;
+    color: #FFFFFF;
+
+}
+
+button:hover{
+    transition: all 1s;
+    background-color: white;
+    color: orange;
+    border: solid 1px orange;
+}
+
+/*button::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    background:#FFFFFF;
+}*/
+/*
+button:hover::before{
+    transition: all 1s linear;
+    width: 100%;
+}
+*/
+.texto{
+    position: absolute;
+    width: 489px;
+    height: 188px;
+    left: 20px;
+    top: 300px;
+}
+
+.mensagem{
+    font-size: 37px;
+    line-height: 59px;
+    color: #FFFFFF;
+}
+
+.quadrado{
+    position: absolute;
+    width: 18px;
+    height: 21px;
+    left: 243px;
+    top: 139px;
+    background: #FE620B;
+}
+
+
+
+.imagem{
+  
+    position: absolute;
+    width: 100px;
+    top: 113%;
+    left: 88%
+    
+}
+
+img{
+    width: 28px;
+}
+
+
+video{
+    width: 350px;
+    height: 250;
+    outline: none;
+}
+
+
+video{
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    margin-left: 50px;
+    margin-top: 700px;
+}
+
+.sobre{
+
+    position: absolute;
+    margin-left: 55%;
+    margin-top: 710px;
+    width: 450px;
+    height: 200px;
+
+}
+
+.card{
+    position: absolute;
+    right: -50%;
+    margin-top: 710px;
+    width: 700px;
+    height: 290px;
+    background: #FE620B;
+    z-index: 1;
+}
+
+.botao-produto{
+    position: absolute;
+    width: 203px;
+    box-sizing: border-box;
+    padding: 10px;
+    left: 138px;
+    top: 41%;
+}
+
+
+
+.botao-historia{
+    position: absolute;
+    width: 203px;
+    box-sizing: border-box;
+    padding: 10px;
+    left: 68%;
+    top: 41%;
+}
+
+
+
+.card:hover{
+    right: 0%;
+    transition: all .4s linear;
+}
+
+.titulo_2{
+    font-size: 30px;
+}
+
+.texto_2{
+    font-size: 24px;
+}
+
+
+.conteudo-sobre{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    top: 158px;
+}

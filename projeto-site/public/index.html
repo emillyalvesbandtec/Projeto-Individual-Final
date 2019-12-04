@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="shortcut icon" href="../projeto_individual/img/basketball2.png" type="image/x-icon">
+    <title>SPORTtech-Home</title>
+
+</head>
+
+<body>
+    <div class="conteudo">
+        <h1 class="titulo">SPORT</h1>
+        <p class="tech">tech</p>
+        <a href="#" class="link-noticias" >Noticias</a>
+        <a href="./index.html#sobre" class="link-sobre">Sobre</a>
+        <a href="#" class="link-contato">Contato</a>
+        <a href="../projeto_individual/login.html" class="link-login">Login</a>
+        <button onclick="cadastro()">Cadastre-se</button>
+    </div>
+
+    <div class="texto">
+    
+        <p class="mensagem">AQUI VOCÊ FICA POR DENTRO DAS NOVIDADES DO SEU TIME</p>
+        <div class="quadrado"></div>
+    
+    </div>
+        
+
+        <div class="conteudo-sobre">
+            <div class="card">
+                
+                <button class="botao-produto" onclick="produto()">Produtos</button>
+                <button class="botao-historia" onclick="historia()">História</button>
+                   
+                
+            </div>
+      
+            <video controls>
+                <source src="./video.mp4" type="video/mp4">
+            </video>
+        
+        
+            <div id="sobre" class="sobre">
+                <h1 class="titulo_2">Quem somos?</h1>
+                <p class="texto_2">Este site tem como intuito apresentar informações do deu time favorito.
+                    Aqui você podera acompanhar as escalações as classificações, estátisticas de jogos
+                    seu jogador preferido e muito mais.Além támbem de poder malhar, correr, jogar com os produtos sporttech
+                </p>
+            </div>
+    
+        </div>
+</body>
+
+</html>
+
+<script>
+    function cadastro() {
+        window.location.href = "cadastro.html";
+    }
+</script>
